@@ -1,0 +1,536 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: white;
+    user-zoom: none;
+}
+::-webkit-scrollbar{
+    appearance: none;
+    width: 10px;
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 0px 10px 10px 0px;
+    background-color: rgba(255, 255, 255, 0.375);
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(43, 43, 43);
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.containar{
+    width: 80%;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.containar .panel{
+    width: 96%;
+    height: 511px;
+    margin-top: 20px;
+    padding: 1% 1%;
+    background-color: rgba(56, 56, 56, 0.409);
+    box-shadow: 0 0 10px .1px rgb(255, 255, 255);
+}
+.containar .panel .content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    gap: 10px;
+    padding: 0;
+    overflow: auto;
+}
+section{
+    width: calc(400px - 20px);
+    max-height: calc(400px - 10px);
+    padding: 10px;
+    border-radius: 5px; 
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    flex-grow: 1;
+    background-color: rgba(255, 255, 255, 0.175);
+}
+
+section:nth-child(1){
+    align-self: flex-start;
+}
+.con2{
+    height: 400px;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+.con2 section{
+    flex-grow: 0;
+}
+.con2 section:nth-child(2),
+.third{
+    display: flex;
+    align-self: flex-start;
+}
+.con2 section:nth-child(2) div,
+.third div{
+    width:  30%;
+    height: 150px;
+    flex-grow: 1;
+}
+.first,.third{
+    display: none;
+}
+.panel .kindanimal,.duration,.Gradualism{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin: 10px 0px;
+}
+select,.duration input,.Gradualism input{
+    width: 170px;
+    background-color: rgb(0, 22, 109);
+    font-weight: bold;
+    font-size: large;
+    border-radius: 10px;
+    padding: 5px 5px;
+    box-shadow:  0 0 2.5px .5px white;
+    border: 0;
+    outline: 0;
+}
+/* select in table */
+.ingred_unit{
+    box-shadow:0 0 rgba(255, 255, 255, 0);
+}
+p{
+    font-weight: bolder;
+}
+table{
+    width: 380px;
+    border-spacing: 0px;
+    margin: 9px 0px;
+    border-radius: 5px;
+    flex-grow: .9;
+    border-spacing: 5px;
+    background-color: rgb(70, 70, 70);
+}
+table tbody tr:nth-last-of-type(even){
+    background-color: rgba(0, 116, 73, 0.515);
+}
+table tr,table td{
+    width: 30%;
+    text-align: center;
+}
+th{
+    background-color: rgb(0, 122, 144);
+}
+td,th{
+    padding: 10px 0px;
+}
+/* حذف صفوف الجدول */
+section .secound_content{
+    max-width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    flex-grow: 1;
+}
+.deletThis{
+    position: absolute;
+    right:-10px;
+    top: 94px;
+    width:14px;
+    max-height: 100%;
+    font-size: x-large;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.deletThis li{
+    list-style: none;
+    width: 100%;
+    line-height: 56px;
+    text-align: center;
+    color: red;
+    cursor: pointer;
+    user-select: none;
+}
+table tbody tr td {
+    background-color: rgb(41, 41, 41);
+}
+table tbody tr .unit_items div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+table tbody tr td input{
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    height: 30px;
+    width: 90%;
+    font-size: medium;
+    font-weight: bold;
+}
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+table tbody tr td div select,
+table tbody tr td div span:last-of-type{
+    width: 55px;
+    font-size: medium;
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0.065);
+}
+table tbody tr td div select option{
+    background-color: rgb(0, 0, 0);
+    font-size: medium;
+    font-weight: bold;
+}
+table tbody tr td div select option:hover{
+    background-color:darkgray;
+}
+table tbody tr td:nth-child(2) input{
+    width: calc(90% - 50px);
+}
+table tfoot tr:last-of-type td{
+    background-color: rgb(56, 120, 0);
+}
+table tfoot tr:first-of-type{
+    background-color: rgb(178, 89, 0);
+}
+table tfoot tr:first-of-type td{
+    padding: 3px 0px;
+}
+#table tfoot tr td:nth-of-type(2) span{
+    max-width: 50px;
+    background-color: red;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+table tfoot tr td button{
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    font-size: large;
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#duration::placeholder,
+textarea::placeholder,
+.card .frst .how_note div span::placeholder,
+input::placeholder{
+    color: rgba(255, 255, 255, 0.81);
+}
+.con2 section:nth-child(2) div textarea,
+.third div textarea{
+    border: 0;
+    border-radius: 5px;
+    width: 100%;
+    height: 79%;
+    padding: 10px;
+    font-size: medium;
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    resize: none;
+    outline: 0;
+    background-color: rgb(41, 41, 41);
+    margin-top: 10px;
+}
+.card .frst .how_note div span::-webkit-scrollbar,
+.con2 section:nth-child(2) div textarea::-webkit-scrollbar{
+    width: 7.5px;
+    height: 10px;
+}
+button[type='submit']{
+    width: 95%;
+    height: 40px;
+    background-color: crimson;
+    border: 0;
+    color: white;
+    font-weight: bold;
+    font-size: x;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+}
+@media(max-width:575px){
+    .containar {
+       width: 90%;
+       padding: 0;
+       margin-top: 30px;
+    }
+}
+@media(max-width:1081px){
+    .con2{
+        padding: 0;
+    }
+}  
+@media(max-width:1054px){
+    .con2{
+        display: none;
+    }
+    .first,.third{
+        display: flex;
+    }
+}
+/* cards */
+.cards{
+    width: 100%;
+    margin-top: 30px;
+    padding: 10px;
+    display: flex;
+    gap:8.6px;
+    flex-wrap: wrap;
+}
+.card{
+    width: 450px;
+    height: 300px;
+    /*background-image: linear-gradient(to left,rgba(3, 1, 99, 0.800),rgba(33, 33, 33, 0.800)); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: flex;
+    font-size: small;
+    flex-grow: 1;
+    position: relative;
+}
+.card .menus{
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+    animation: .1s linear forwards;
+}.card .menus .menu{
+    display: none;
+    width: 87%;
+    height: calc(100% - 40px);
+    position: absolute;
+    right: 0;
+    top: 35px;
+    border-radius: 5px;
+    background-color: white;
+}.card .menus .btnmenu{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.213);
+    color: white;
+    display: flex;align-items: center;justify-content: right;
+    position: relative;
+    transition: .3s;
+}
+.card .menus .btnmenu:hover{
+    background-color: white;
+    color: black;
+    transition: .3s;
+}
+.card .menus .btnmenu:after {
+    content: '\2807';
+    font-size: 25px;
+    position: absolute;
+    right: 2px;
+}
+.showmenu{
+    opacity: 1;
+}
+.menus .menu .main_menu{
+    width: 100%;
+    height: calc(100% - 10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}.menus .menu .main_menu li,.title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:calc(100% - 20px);
+    height: 30px;
+    padding: 3px 10px;
+    cursor: pointer;
+}
+.menus .menu ul li:hover{
+    background-color: rgb(211, 211, 211);
+}.menu ul li div,.title div{
+    color: black;
+    font-size: medium;
+    font-weight: bold;
+}.card .menu img{
+    width: 25px;
+}
+.card_info{
+    width: 100%;
+    height: calc(100% - 10px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 10px;
+}
+.card_info li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:calc(100% - 20px);
+    height: 30px;
+    padding: 7px 10px;
+    cursor: pointer;
+}
+.card_info li:last-of-type{
+    border-radius: 0 0 5px 5px;
+}
+.card_info .title div:last-of-type{
+    padding: 7px;
+    border-radius: 50%;
+}
+.card_info .title img{
+    width: 20px;
+}
+.card_info .title div:last-of-type:hover{
+    background-color: rgba(0, 0, 0, 0.121);
+}
+@keyframes ActiveMenu{
+    from{
+        height: calc(100% - 10px);
+    }
+    to{
+       height: calc(70% - 40px);
+    }
+}
+@keyframes NullMenu{
+    from{
+        height: calc(70% - 40px);
+    }
+    to{
+       height: calc(100% - 10px);
+    }
+}
+.card .frst,
+.card .table_show{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: auto;
+}
+.card .frst{
+    overflow: hidden;
+}
+.card .frst .time_plus,
+.card .frst .how_note{
+    width: 100%;
+}
+.card .frst .time_plus{
+    height:40%;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    transform-origin: right;
+}
+.card .frst .time_plus div{
+    padding: 10px 10px;
+    width: 180px;
+    border-radius: 5px;
+    font-size: 13px;
+    background-color: rgb(35, 35, 35);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-grow: 1;
+}
+.card .frst .how_note{
+    height: 60%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+} 
+.card .frst .how_note div{
+    width: 100%;
+    height: 48%;
+    padding: 2px 8px;
+}
+.card .frst .how_note div span{
+    margin-top: 5px;
+    width: 95%;
+    height: 55%;
+    background-color: rgb(35, 35, 35);
+    padding: 5px;
+    display: block;
+    display: flex;
+    align-items: center;
+    overflow: auto;
+}
+.third div textarea::-webkit-scrollbar{
+    width: 5px;
+    height: 10px;
+}
+.third div textarea::-webkit-scrollbar-thumb{
+    border-radius: 0;
+}
+.card .table_show table{
+    width: 100%;
+    font-size: 15px;
+    flex-grow: 0;
+}
+.card .table_show table td{
+    padding: 0;
+}
+.active{
+    border: 2px solid green;
+}
+.card .table_show table tbody td span{
+    width: 100%;
+    height: 100%;
+    padding: 10px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+.card .table_show table tfoot td {
+    padding: 10px 2px;
+}
+@media(max-width:1150px){
+    .card .frst .time_plus div{
+        height: 50px;
+    }
+}
+@media(max-width:1125px){
+    .card .frst .time_plus div{
+        height: 35px;
+    }
+}
+

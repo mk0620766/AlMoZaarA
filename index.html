@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>خلطة اعلاف</title>
+    <title>موقع المزارع الالكتروني</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body dir="auto" onsubmit="return false">
@@ -94,113 +94,6 @@
                             </tfoot>
                         </table>
                     </div>
-                       
-                </section>
-                <section class="third">
-                    <div class="howWork">
-                        <p>الطريقة:</p>
-                       <textarea name="" id="notes"  placeholder="اكتب شيئا"></textarea>
-                    </div>
-                    <div class="notes">
-                      <p>ملاحظات :</p>
-                      <textarea name="" id="notes"  placeholder="اكتب شيئا"></textarea> 
-                    </div>
-                </section>
-                <section class="fourth">
-                    <button type="submit" id="createmap">أنشإ خطة العلف</button>
-                </section> 
-            </div>
-        </div>
-        <div class="cards">
-            <div class='card'>
-                <!-- this button of 3 potint virtical menu-->
-
-                <div class="menus">
-                    <div class='btnmenu'>
-                    </div>
-                   <div class="menu">
-                    <ul class="main_menu">
-                        <li class="info">
-                            <div>معلومات الخطة</div>
-                            <div><img src="/imgs/infoIcon.svg" alt="info"></div>
-                        </li>
-                        <li class="edit">
-                            <div>تعديل</div>
-                            <div><img src="/imgs/edit.svg" alt="edit"></div>
-                        </li>
-                        <li class="duplicate">
-                            <div>تكرار</div>
-                            <div><img src="/imgs/duplicte.svg" alt="duplicate"></div>
-                        </li>
-                        <li class="saveToExcel">
-                            <div>حفظ كملف إكسل</div>
-                            <div><img src="/imgs/downloadAsExcel.png" alt="downloadAsExcel"></div>
-                        </li>
-                        <li class="delet">
-                            <div>حذف</div>
-                            <div><img src="/imgs/deletIcon.png" alt="delet"></div>
-                        </li>
-                    </ul>
-                    <ul class="card_info">
-                        <div class="title">
-                            <div>الرجوغ</div>
-                            <div class="bacKtoMainMenu"><img src="/imgs/arrow-left.svg" alt="back"></div>
-                        </div>
-                        <li class="dateCreate">
-                            <div>تاريخ الإنشاء</div>
-                            <div id="dateCreateShow">27/4/2024</div>
-                        </li>
-                        <li>
-                            <div>نوع الحيوان</div>
-                            <div id="KindAnimalMenu">ابقار ||عجول</div>
-                        </li>
-                    </ul>
-                </div>
-                   </div>
-                <div class="frst">
-                <div class="time_plus">
-                    <div class="duration_time">
-                        مدة هذه الخطة   :
-                        <span id="map_duration">${mapsArray[ind].map_duration}</span>
-                        يوم
-                    </div>
-                    <div class="plus">
-                        الزيادة التدريجية اليومية :
-                        <span id="map_Gradualism">${mapsArray[ind].food_Gradualism}</span>
-                    </div>
-                </div>
-                <div class="how_note">
-                    <div class="howWork">
-                        <p>الطريقة:</p>
-                       <span>${mapsArray[ind].method}</span>
-                    </div>
-                    <div class="notes">
-                      <p>ملاحظات :</p>
-                      <span>${mapsArray[ind].notes}/</span> 
-                    </div>
-                </div>
-                </div>
-                <div class="table_show">
-                <table>
-                    <caption style="margin-bottom: 5px;font-size: large;font-weight: bold;padding-bottom:6px;" class='caption_table_show'> الجدول</caption>
-                    <thead>
-                        <tr>
-                            <th dir="ltr">:المكونات</th>
-                            <th dir="ltr">:الكمية</th>
-                            <th dir="ltr">:السعر (ج)</th>
-                        </tr>
-                    </thead>
-                    <tbody id='tbodyTableShow${ind}'>
-                   </tbody> 
-                    <tfoot  id='tfootTableShow${ind}'>
-                        <tr>
-                            <td>العدد : <span id="totale_ingrad_count${ind}"></span></td>
-                            <td>الكمية: <span id="totale_ingrad_size${ind}"></span><u style="margin-right:3px;font-weight: 100;text-decoration: none;">كيلو</u></td>
-                            <td>السعر : <span id="totale_ingrad_price${ind}"></span><u style="margin-right:3px;font-weight: 100;text-decoration: none;">جنيه</u></td>
-                        </tr>
-                    </tfoot>
-                </table>
-                </div> 
                 </div>
         </div>
     <script src="main.js"></script>
